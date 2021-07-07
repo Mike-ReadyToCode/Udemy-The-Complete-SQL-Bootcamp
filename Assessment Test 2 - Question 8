@@ -1,0 +1,9 @@
+-- Assessment Test 2 - Question 8
+
+-- How can you produce an ordered list of the fist 10 surnames in the members table?
+-- This list must not contain duplicates.
+
+SELECT DISTINCT surname
+FROM cd.members
+ORDER BY surname
+LIMIT 10;
