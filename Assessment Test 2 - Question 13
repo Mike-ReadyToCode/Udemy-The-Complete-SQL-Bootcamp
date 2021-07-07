@@ -1,0 +1,12 @@
+-- Assessment Test 2 - Question 13
+
+-- How can you produce a list of the start times for bookings for tennis courts, for the date '2012-09-21'? 
+-- Return a list of start time and facility name pairings, ordered by the time.
+
+SELECT starttime, name
+FROM cd.bookings as b
+INNER JOIN cd.facilities as f
+ON b.facid = f.facid
+WHERE name ILIKE '%tennis court%'
+AND starttime >= '2012-09-21'
+AND starttime < '2012-09-22';
