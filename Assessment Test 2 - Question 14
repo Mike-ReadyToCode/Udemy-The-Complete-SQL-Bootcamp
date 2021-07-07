@@ -1,0 +1,9 @@
+-- Assessment Test 2 - Question 14
+
+-- How can you produce a list of the start times for bookings by members named 'David Farrell'?
+
+SELECT starttime
+FROM cd.bookings as b
+INNER JOIN cd.members as m
+ON b.memid = m.memid
+WHERE firstname = 'David' AND surname = 'Farrell';
